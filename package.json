@@ -1,0 +1,29 @@
+{
+  "name": "musicvideo-generator",
+  "version": "1.0.0",
+  "description": "A library to turn musics into videos",
+  "license": "AGPL-3.0",
+  "homepage": "https://github.com/pixiv/musicvideo-generator",
+  "bugs": "https://github.com/pixiv/musicvideo-generator/issues",
+  "repository": "pixiv/musicvideo-generator",
+  "main": "lib",
+  "browser": "lib/index_browser",
+  "directories": {
+    "doc": "README.md",
+    "example": "example",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "pixi.js": "^4.5.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "electron": "^1.8.1",
+    "eslint": "^4.9.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^7.4.0",
+    "file-loader": "^1.1.5",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.2"
+  }
+}
