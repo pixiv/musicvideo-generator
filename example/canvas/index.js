@@ -25,6 +25,8 @@ const image = new Image;
 
 image.onload = () => {
   const albumArtCanvas = new Canvas(audioContext, {
+    fps: 30,
+    resolution: { width: 480, height: 480 },
     image,
     blur: {
       movement: { band: { bottom: 50, top: 300 }, threshold: 155 },
@@ -47,7 +49,7 @@ image.onload = () => {
       title: 'Ain\'t We Got Fun',
       sub: 'Music by Richard A. Whiting, lyrics by Raymond B. Egan and Gus Kahn.',
     },
-  }, () => audioElement.currentTime);
+  }, 'light_leaks.mp4', () => audioElement.currentTime);
 
   audioNode.connect(albumArtCanvas.audioAnalyserNode);
   document.body.appendChild(albumArtCanvas.getRenderer().view);

@@ -10,18 +10,6 @@ NPMパッケージとして作成されています.
 
 > OfflineAudioContextがまともに対応しないことには始まらない. 早すぎたんだ…
 
-## バンドリング
-musicvideo-generatorは内部に画像, 動画などのJavaScript以外のファイルを含みます.
-バンドリングする際には注意することがあります.
-
-https://github.com/defunctzombie/package-browser-field-spec
-に従ってバンドリング用のエントリーポイントを提供しています.
-
-当該エントリーポイントではJavaScript以外のファイルへのパスのリテラルを引数として`require`関数を呼んでいます.
-この関数はそれらのファイルへのURLを返す必要があります.
-
-JavaScript以外のファイルは`assets`ディレクトリに置かれています.
-
 ## PixiJS
 PixiJSのshared tickerは使用していませんが, 通常だと自動的に開始し, CPU時間を消費します.
 無効にするには`require('musicvideo-generator')`を最初に実行する実行コンテキストでshared
@@ -46,7 +34,12 @@ Mozilla FirefoxやGoogle Chromium, Electronで動作します.
 paramsです. ただし, `fps`を省略した場合`requestAnimationFrame`に同期します.
 
 ###### 第3引数
+ライトリークの動画です. `PIXI.Sprite.from`が受け付けるものと同様です.
+動画は`light_leaks`にある連番画像から生成してください. フレームレートは30 FPSです.
+
+###### 第4引数
 楽曲の現在再生されている時間を返すクロージャです. 単位は秒です.
+省略された場合は`AudiContext`の`currentTime`が用いられます.
 
 ##### メソッド
 
@@ -97,6 +90,15 @@ paramsです.
 paramsは調整を必要とするパラメーターをプロパティにもつオブジェクトです.
 
 あるプロパティの値が`null`, `undefined`, または指定されていない場合を「省略された」とします.
+
+##### `resolution`
+解像度です. このパラメーターは`changeParams`によって変更できません.
+
+###### `width`
+幅です. 単位はピクセルです.
+
+###### `height`
+高さです. 単位はピクセルです.
 
 ##### `fps`
 FPSです.

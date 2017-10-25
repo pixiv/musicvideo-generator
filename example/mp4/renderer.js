@@ -34,6 +34,7 @@ fetch(music).then(response => response.arrayBuffer()).then(audio => {
   const emitter = new RgbaEmitter(audio, {
     image,
     fps: 30,
+    resolution: { width: 720, height: 720 },
     blur: {
       movement: { band: { bottom: 50, top: 300 }, threshold: 165 },
       blink: { band: { bottom: 2000, top: 15000 }, threshold: 165 },
@@ -64,7 +65,7 @@ fetch(music).then(response => response.arrayBuffer()).then(audio => {
     '-f', 'rawvideo',
     '-framerate', '30',
     '-pix_fmt', 'bgr32',
-    '-video_size', [emitter.width, emitter.height].join('x'),
+    '-video_size', '720x720',
     '-i', 'pipe:',
     '-i', path.resolve(__dirname, music),
     '-c:v', 'libx264',
