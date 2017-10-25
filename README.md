@@ -40,10 +40,13 @@ Mozilla FirefoxやGoogle Chromium, Electronで動作します.
 ##### 引数
 
 ###### 第1引数
-paramsです. ただし, `fps`を省略した場合`requestAnimationFrame`に同期します.
+`AudioContext`です. `AnalyserNode`はこの`AudioContext`に紐付けられます.
 
 ###### 第2引数
-楽曲の現在再生されている時間です. 単位は秒です.
+paramsです. ただし, `fps`を省略した場合`requestAnimationFrame`に同期します.
+
+###### 第3引数
+楽曲の現在再生されている時間を返すクロージャです. 単位は秒です.
 
 ##### メソッド
 
