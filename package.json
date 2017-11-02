@@ -1,6 +1,6 @@
 {
   "name": "musicvideo-generator",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A library to turn musics into videos",
   "license": "AGPL-3.0",
   "homepage": "https://github.com/pixiv/musicvideo-generator",
