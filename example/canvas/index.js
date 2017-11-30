@@ -27,7 +27,14 @@ image.onload = () => {
   const albumArtCanvas = new Canvas(audioContext, {
     fps: 30,
     resolution: { width: 480, height: 480 },
-    image,
+    sprite: {
+      image,
+      movement: {
+        circle: { rad: Math.PI / 16, scale: 0.2, speed: 0.8 },
+        random: { scale: 16, speed: 16 },
+        zoom: { scale: 1, speed: 1 },
+      },
+    },
     blur: {
       movement: { band: { bottom: 50, top: 300 }, threshold: 155 },
       blink: { band: { bottom: 2000, top: 15000 }, threshold: 155 },

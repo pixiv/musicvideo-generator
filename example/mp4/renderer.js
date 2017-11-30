@@ -32,9 +32,9 @@ fetch(music).then(response => response.arrayBuffer()).then(audio => {
   return audioContext.decodeAudioData(audio);
 }).then(audio => {
   const emitter = new RgbaEmitter(audio, {
-    image,
     fps: 30,
     resolution: { width: 720, height: 720 },
+    sprite: { image },
     blur: {
       movement: { band: { bottom: 50, top: 300 }, threshold: 165 },
       blink: { band: { bottom: 2000, top: 15000 }, threshold: 165 },
