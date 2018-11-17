@@ -22,6 +22,7 @@ const { RgbaEmitter } = require('../../lib');
 const { execFile } = require('child_process');
 const { webFrame } = require('electron');
 const path = require('path');
+
 const music = '../media/aint_we_got_fun_billy_jones1921.mp3';
 const image = '../media/Ain\'t_We_Got_Fun_1b.jpg';
 

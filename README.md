@@ -1,6 +1,6 @@
 # musicvideo-generator
 ミュージックビデオを生成する, Web APIを利用したECMAScript 2017ライブラリです.
-最新のMozilla FirefoxやGoogle Chromium, Electron 1.6.11と互換性があります.
+最新のMozilla FirefoxやGoogle Chromium, Electron 3.0.9と互換性があります.
 NPMパッケージとして作成されています.
 
 このパッケージは[Pawoo Music](https://music.pawoo.net/)で使用されています.
